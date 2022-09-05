@@ -1,2 +1,0 @@
-# Webfood
-Online food store
