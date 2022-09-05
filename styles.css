@@ -1,0 +1,241 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: rgb(44, 41, 38);
+}
+
+a {
+  text-decoration: none;
+}
+
+#main-header {
+  height: 5rem;
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background: linear-gradient(180deg, rgb(9, 8, 8), rgb(24, 23, 23));
+}
+
+#main-header li a {
+  color: rgb(238, 164, 80);
+}
+
+#logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: rgb(238, 164, 80);
+}
+
+.menu-btn {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+#main-header ul {
+  list-style: none;
+  display: flex;
+  gap: 0 1.5rem;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* #main-header li {
+  margin: 0 16px;
+} */
+
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  height: 5rem;
+  /* background-color: black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5%;
+}
+
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 1rem;
+}
+
+#side-drawer li {
+  margin: 1rem 0;
+}
+
+#side-drawer a {
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
+}
+
+#main-header nav a:hover {
+  color: rgb(180, 131, 39);
+}
+
+main h1 {
+  color: rgb(238, 164, 80);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0 3rem;
+}
+
+#latest-products {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#latest-products ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.food-items {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.food-items h2 {
+  margin: 0 0 1rem 0;
+}
+
+.food-items img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-item-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: rgb(228, 157, 44);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+  background-color: rgb(221, 134, 34);
+}
+
+@media (max-width: 48rem) {
+  #main-header nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
+}
+
+/* Вариант с flex внутри article - меняется отображение если страница уменьшается. При сужении картинки выстраиваются в колонку друг под другом. Выравниватель картинок - это flex basis */
+
+/* #latest-products ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+}
+
+main article {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-items img {
+  height: 240px;
+  /* max-width: 350px; */
+/* object-fit: cover;
+}
+
+.food-items {
+  background-color: bisque;
+  text-align: center;
+  flex-basis: 40%;
+}
+
+#latest-products {
+  width: 80%;
+  margin: 50px auto;
+} */
+
+/* вариант со flex но он установлен только на секции. здесь при сужении картинки остаются на месте - ничего не сужается */
+/* #latest-products ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 50px;
+  list-style: none;
+}
+
+.food-items article {
+  background-color: antiquewhite;
+  width: 350px;
+  height: 370px;
+  text-align: center;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 1px 2px 4px rgb(24, 23, 23);
+}
+
+.food-items img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.btn {
+  background-color: rgb(249, 175, 84);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+} */
